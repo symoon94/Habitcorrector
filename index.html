@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Desk Habit Corrector</title>
 </head>
 <body>
-    <div>Habit Corrector</div>
+    <div>Desk Habit Corrector</div>
 <button type="button" onclick="init()">Start</button>
 <div><canvas id="canvas"></canvas></div>
 <div id="label-container"></div>
@@ -18,12 +18,11 @@
     <source src="./sound/Alarm Alert Effect-SoundBible.com-462520910.mp3" />
     </audio>
 <script type="text/javascript">
-
-    // More API functions here:
+// More API functions here:
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/pose
 
     // the link to your model provided by Teachable Machine export panel
-    const URL = "./my_model/";
+    const URL = "https://teachablemachine.withgoogle.com/models/bOxr-Nce/";
     let model, webcam, ctx, labelContainer, maxPredictions;
 
     async function init() {
@@ -66,6 +65,7 @@
         const { pose, posenetOutput } = await model.estimatePose(webcam.canvas);
         // Prediction 2: run input through teachable machine classification model
         const prediction = await model.predict(posenetOutput);
+
         const mySound = document.getElementById("sound");
 
         if (prediction[0].probability.toFixed(2) >= 0.90) {
