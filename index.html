@@ -18,11 +18,11 @@
     <source src="./sound/Alarm Alert Effect-SoundBible.com-462520910.mp3" />
     </audio>
 <script type="text/javascript">
-// More API functions here:
+    // More API functions here:
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/pose
 
     // the link to your model provided by Teachable Machine export panel
-    const URL = "https://teachablemachine.withgoogle.com/models/bOxr-Nce/";
+    const URL = "./my_model/";
     let model, webcam, ctx, labelContainer, maxPredictions;
 
     async function init() {
@@ -65,7 +65,6 @@
         const { pose, posenetOutput } = await model.estimatePose(webcam.canvas);
         // Prediction 2: run input through teachable machine classification model
         const prediction = await model.predict(posenetOutput);
-
         const mySound = document.getElementById("sound");
 
         if (prediction[0].probability.toFixed(2) >= 0.90) {
