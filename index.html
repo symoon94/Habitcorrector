@@ -73,7 +73,7 @@
         const mySound = document.getElementById("sound");
 
         if (prediction[0].probability.toFixed(2) >= 0.90) {
-            labelContainer.childNodes[0].innerHTML = "좋아 그렇지 ~";
+            labelContainer.childNodes[0].innerHTML = "바른 자세 👍";
             mySound.pause();
         } else if (prediction[1].probability.toFixed(2) >= 0.90) {
             labelContainer.childNodes[0].innerHTML = "머리 뜯지 말라우!";
