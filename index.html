@@ -78,14 +78,14 @@
             labelContainer.childNodes[0].innerHTML = "좋아 그렇지 ~";
             mySound.pause();
         } else if (prediction[1].probability.toFixed(2) >= 0.90) {
-            labelContainer.childNodes[0].innerHTML = "머리 고마 뜯으라우!";
+            labelContainer.childNodes[0].innerHTML = "머리 뜯지 말라우!";
             mySound.play();
-            alert("머리 고마 뜯으라우!");
+            alert("머리 뜯지 말라우!");
 
         } else if (prediction[2].probability.toFixed(2) >= 0.90) {
-            labelContainer.childNodes[0].innerHTML = "손톱 고마 물어 뜯으라우!";
+            labelContainer.childNodes[0].innerHTML = "손톱 물어 뜯지 말라우!";
             mySound.play();
-            alert("손톱 고마 물어 뜯으라우!");
+            alert("손톱 물어 뜯지 말라우!");
         }
 
         // finally draw the poses
